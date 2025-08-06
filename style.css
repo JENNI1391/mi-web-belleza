@@ -1,1 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600&display=swap');
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+header {
+  background-color: #f7f7f7;
+  padding: 20px 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 36px;
+  color: #000;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 600;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: #ddd;
+}
+
+.section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.servicio h3 {
+  font-size: 22px;
+  margin-top: 20px;
+  color: #444;
+}
+
+.servicio ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.servicio li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+}
+
+.btn {
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #1cb24f;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.galeria img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.whatsapp {
+  color: #25D366;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.whatsapp:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  color: #555;
+  margin-top: 40px;
+}
+
+/* Responsive ajustes */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicio li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn {
+    margin-top: 5px;
+  }
+}
