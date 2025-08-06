@@ -1,73 +1,197 @@
-<section class="services">
-  <h2>PESTAÑAS</h2>
-  <div class="service">
-    <span>Clásicas - $80.000</span>
-    <button onclick="addToCart('Clásicas - $80.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Efecto Pestañina - $90.000</span>
-    <button onclick="addToCart('Efecto Pestañina - $90.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Híbridas - $100.000</span>
-    <button onclick="addToCart('Híbridas - $100.000')">Agregar</button>
-  </div>
+from pathlib import Path
 
-  <h2>CEJAS</h2>
-  <div class="service">
-    <span>Semi permanentes - $30.000</span>
-    <button onclick="addToCart('Cejas Semi permanentes - $30.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Laminado de cejas - $30.000</span>
-    <button onclick="addToCart('Laminado de cejas - $30.000')">Agregar</button>
-  </div>
+# HTML con todo integrado, conservando estilos cursivos y colores llamativos
+index_html = """
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumina - Belleza</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1 class="logo">Lumina</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#carrito">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <h2>LABIOS</h2>
-  <div class="service">
-    <span>Baby lips - $50.000</span>
-    <button onclick="addToCart('Baby lips - $50.000')">Agregar</button>
-  </div>
+    <section id="servicios" class="section">
+        <h2>PESTAÑAS</h2>
+        <div class="servicio"><span>Clásicas: $80.000</span><button onclick="agregarAlCarrito('Pestañas Clásicas', 80000)">Agregar</button></div>
+        <div class="servicio"><span>Efecto Pestañina: $90.000</span><button onclick="agregarAlCarrito('Efecto Pestañina', 90000)">Agregar</button></div>
+        <div class="servicio"><span>Híbridas: $100.000</span><button onclick="agregarAlCarrito('Híbridas', 100000)">Agregar</button></div>
 
-  <h2>LIMPIEZA FACIAL</h2>
-  <div class="service">
-    <span>Limpieza facial básica - $60.000</span>
-    <button onclick="addToCart('Limpieza facial básica - $60.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Limpieza facial profunda - $120.000</span>
-    <button onclick="addToCart('Limpieza facial profunda - $120.000')">Agregar</button>
-  </div>
+        <h2>CEJAS</h2>
+        <div class="servicio"><span>Semi permanentes: $30.000</span><button onclick="agregarAlCarrito('Cejas Semi permanentes', 30000)">Agregar</button></div>
+        <div class="servicio"><span>Laminado de cejas: $30.000</span><button onclick="agregarAlCarrito('Laminado de cejas', 30000)">Agregar</button></div>
 
-  <h2>APLICACIÓN QUEMADOR DE GRASA</h2>
-  <div class="service">
-    <span>Localizada - $80.000</span>
-    <button onclick="addToCart('Quemador grasa localizada - $80.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Hidrolipoclasia - $300.000</span>
-    <button onclick="addToCart('Hidrolipoclasia - $300.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Peptonas (c/d sesión) - $90.000</span>
-    <button onclick="addToCart('Peptonas - $90.000')">Agregar</button>
-  </div>
+        <h2>LABIOS</h2>
+        <div class="servicio"><span>Baby lips: $50.000</span><button onclick="agregarAlCarrito('Baby lips', 50000)">Agregar</button></div>
 
-  <h2>TTOS GENERALES (según valoración)</h2>
-  <div class="service">
-    <span>Ttos papada enzimática - $90.000 - $200.000</span>
-    <button onclick="addToCart('Ttos papada enzimática - $90.000 - $200.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Ttos anti envejecimiento - $90.000 - $200.000</span>
-    <button onclick="addToCart('Ttos anti envejecimiento - $90.000 - $200.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Ácido hialurónico - $90.000 - $200.000</span>
-    <button onclick="addToCart('Ácido hialurónico - $90.000 - $200.000')">Agregar</button>
-  </div>
-  <div class="service">
-    <span>Botox - $120.000</span>
-    <button onclick="addToCart('Botox - $120.000')">Agregar</button>
-  </div>
-</section>
+        <h2>LIMPIEZA FACIAL</h2>
+        <div class="servicio"><span>Limpieza facial básica: $60.000</span><button onclick="agregarAlCarrito('Limpieza facial básica', 60000)">Agregar</button></div>
+        <div class="servicio"><span>Limpieza facial profunda: $120.000</span><button onclick="agregarAlCarrito('Limpieza facial profunda', 120000)">Agregar</button></div>
+
+        <h2>APLICACIÓN QUEMADOR DE GRASA</h2>
+        <div class="servicio"><span>Localizada: $80.000</span><button onclick="agregarAlCarrito('Aplicación quemador localizada', 80000)">Agregar</button></div>
+        <div class="servicio"><span>Hidrolipoclasia: $300.000</span><button onclick="agregarAlCarrito('Hidrolipoclasia', 300000)">Agregar</button></div>
+        <div class="servicio"><span>Peptonas: $90.000 c/d sesión</span><button onclick="agregarAlCarrito('Peptonas', 90000)">Agregar</button></div>
+
+        <h2>TTOS GENERALES</h2>
+        <div class="servicio"><span>Papada enzimática: $90.000 - $200.000</span><button onclick="agregarAlCarrito('Papada enzimática', 90000)">Agregar</button></div>
+        <div class="servicio"><span>Anti envejecimiento: $90.000 - $200.000</span><button onclick="agregarAlCarrito('Anti envejecimiento', 90000)">Agregar</button></div>
+        <div class="servicio"><span>Ácido hialurónico: $90.000 - $200.000</span><button onclick="agregarAlCarrito('Ácido hialurónico', 90000)">Agregar</button></div>
+        <div class="servicio"><span>Botox: $120.000</span><button onclick="agregarAlCarrito('Botox', 120000)">Agregar</button></div>
+    </section>
+
+    <section id="galeria" class="section">
+        <h2>Galería</h2>
+        <div class="galeria">
+            <img src="img/bf318453-56e6-4289-9433-12530b0d34fc.jpeg" alt="Imagen 1" />
+            <img src="img/067bff4a-783d-478a-8833-419f5e51fa66.jpeg" alt="Imagen 2" />
+            <img src="img/cb1a635f-331d-47aa-b569-cfade5195c06.jpeg" alt="Imagen 3" />
+            <img src="img/e5a79fea-1d79-48af-9d90-4b5a1747f018.jpeg" alt="Imagen 4" />
+        </div>
+    </section>
+
+    <section id="carrito" class="section">
+        <h2>Carrito</h2>
+        <ul id="lista-carrito"></ul>
+        <p id="total">Total: $0</p>
+        <a id="enviar-whatsapp" href="#" target="_blank">Enviar por WhatsApp</a>
+    </section>
+
+    <footer>
+        <p>Contacto: <a href="https://wa.me/573045903075" target="_blank">+57 304 5903075</a></p>
+    </footer>
+
+    <script>
+        let carrito = [];
+        function agregarAlCarrito(servicio, precio) {
+            carrito.push({ servicio, precio });
+            mostrarCarrito();
+        }
+        function mostrarCarrito() {
+            const lista = document.getElementById("lista-carrito");
+            lista.innerHTML = "";
+            let total = 0;
+            carrito.forEach(item => {
+                const li = document.createElement("li");
+                li.textContent = `${item.servicio}: $${item.precio}`;
+                lista.appendChild(li);
+                total += item.precio;
+            });
+            document.getElementById("total").textContent = "Total: $" + total;
+            const mensaje = encodeURIComponent(carrito.map(i => `${i.servicio}: $${i.precio}`).join("\\n"));
+            document.getElementById("enviar-whatsapp").href = "https://wa.me/573045903075?text=" + mensaje;
+        }
+    </script>
+</body>
+</html>
+"""
+
+style_css = """
+body {
+    font-family: 'Cursive', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffe6ff;
+    color: #330033;
+}
+
+header {
+    background: linear-gradient(to right, #cc66ff, #9933ff);
+    padding: 1em;
+    text-align: center;
+}
+
+.logo {
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin-top: 1em;
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.section {
+    padding: 2em;
+    text-align: center;
+}
+
+.servicio {
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    background-color: #f9ccff;
+    padding: 0.5em 1em;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #cc33ff;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Cursive', sans-serif;
+}
+
+button:hover {
+    background-color: #aa00cc;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.galeria img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#carrito {
+    background-color: #fff0ff;
+    padding: 1em;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #e6ccff;
+    font-size: 1em;
+}
+"""
+
+# Guardar los archivos
+Path("/mnt/data/index.html").write_text(index_html, encoding="utf-8")
+Path("/mnt/data/style.css").write_text(style_css, encoding="utf-8")
+
+"/mnt/data/index.html", "/mnt/data/style.css"
