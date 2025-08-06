@@ -1,94 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lumina - Belleza</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina - Belleza y Cuidado</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h1 class="logo">Lumina</h1>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#carrito">Carrito</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="servicios" class="section">
-        <h2>PESTAÑAS</h2>
-        <div class="servicio"><span>Clásicas: $80.000</span><button onclick="agregarAlCarrito('Pestañas Clásicas', 80000)">Agregar</button></div>
-        <div class="servicio"><span>Efecto Pestañina: $90.000</span><button onclick="agregarAlCarrito('Efecto Pestañina', 90000)">Agregar</button></div>
-        <div class="servicio"><span>Híbridas: $100.000</span><button onclick="agregarAlCarrito('Híbridas', 100000)">Agregar</button></div>
+  <header>
+    <div class="header-contenido">
+      <img src="img/logo.png" alt="Logo Lumina" class="logo-img" />
+      <h1 class="logo-texto">Lumina</h1>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <h2>CEJAS</h2>
-        <div class="servicio"><span>Semi permanentes: $30.000</span><button onclick="agregarAlCarrito('Cejas Semi permanentes', 30000)">Agregar</button></div>
-        <div class="servicio"><span>Laminado de cejas: $30.000</span><button onclick="agregarAlCarrito('Laminado de cejas', 30000)">Agregar</button></div>
+  <main>
+    <section id="servicios">
+      <h2>💄 Servicios Disponibles</h2>
 
-        <h2>LABIOS</h2>
-        <div class="servicio"><span>Baby lips: $50.000</span><button onclick="agregarAlCarrito('Baby lips', 50000)">Agregar</button></div>
+      <div class="servicio">
+        <p><strong>Extensiones de Pestañas:</strong> Efecto Rímel, 2D, Híbridas. ¡Realza tu mirada y ahorra tiempo maquillándote!</p>
+      </div>
 
-        <h2>LIMPIEZA FACIAL</h2>
-        <div class="servicio"><span>Limpieza facial básica: $60.000</span><button onclick="agregarAlCarrito('Limpieza facial básica', 60000)">Agregar</button></div>
-        <div class="servicio"><span>Limpieza facial profunda: $120.000</span><button onclick="agregarAlCarrito('Limpieza facial profunda', 120000)">Agregar</button></div>
+      <div class="servicio">
+        <p><strong>Laminado de Cejas:</strong> Incluye diseño y tinte. Aporta grosor y volumen, dura hasta 5 semanas.</p>
+      </div>
 
-        <h2>APLICACIÓN QUEMADOR DE GRASA</h2>
-        <div class="servicio"><span>Localizada: $80.000</span><button onclick="agregarAlCarrito('Aplicación quemador localizada', 80000)">Agregar</button></div>
-        <div class="servicio"><span>Hidrolipoclasia: $300.000</span><button onclick="agregarAlCarrito('Hidrolipoclasia', 300000)">Agregar</button></div>
-        <div class="servicio"><span>Peptonas: $90.000 c/d sesión</span><button onclick="agregarAlCarrito('Peptonas', 90000)">Agregar</button></div>
+      <div class="servicio">
+        <p><strong>Esmaltado Semipermanente:</strong> Manos o pies. ¡Uñas siempre perfectas!</p>
+      </div>
 
-        <h2>TTOS GENERALES</h2>
-        <div class="servicio"><span>Papada enzimática: $90.000 - $200.000</span><button onclick="agregarAlCarrito('Papada enzimática', 90000)">Agregar</button></div>
-        <div class="servicio"><span>Anti envejecimiento: $90.000 - $200.000</span><button onclick="agregarAlCarrito('Anti envejecimiento', 90000)">Agregar</button></div>
-        <div class="servicio"><span>Ácido hialurónico: $90.000 - $200.000</span><button onclick="agregarAlCarrito('Ácido hialurónico', 90000)">Agregar</button></div>
-        <div class="servicio"><span>Botox: $120.000</span><button onclick="agregarAlCarrito('Botox', 120000)">Agregar</button></div>
+      <div class="servicio">
+        <p><strong>Quemadores de Grasa Localizados:</strong> Modelado corporal no invasivo.</p>
+      </div>
     </section>
 
-    <section id="galeria" class="section">
-        <h2>Galería</h2>
-        <div class="galeria">
-            <img src="img/bf318453-56e6-4289-9433-12530b0d34fc.jpeg" alt="Imagen 1" />
-            <img src="img/067bff4a-783d-478a-8833-419f5e51fa66.jpeg" alt="Imagen 2" />
-            <img src="img/cb1a635f-331d-47aa-b569-cfade5195c06.jpeg" alt="Imagen 3" />
-            <img src="img/e5a79fea-1d79-48af-9d90-4b5a1747f018.jpeg" alt="Imagen 4" />
-        </div>
+    <section id="galeria">
+      <h2>🌈 Galería</h2>
+      <div class="galeria">
+        <img src="img/servicio1.jpg" alt="Trabajo 1" />
+        <img src="img/servicio2.jpg" alt="Trabajo 2" />
+        <img src="img/servicio3.jpg" alt="Trabajo 3" />
+      </div>
     </section>
 
-    <section id="carrito" class="section">
-        <h2>Carrito</h2>
-        <ul id="lista-carrito"></ul>
-        <p id="total">Total: $0</p>
-        <a id="enviar-whatsapp" href="#" target="_blank">Enviar por WhatsApp</a>
+    <section id="contacto">
+      <h2>📲 Contáctanos</h2>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/573138850868">313 885 0868</a></p>
+      <p><strong>Instagram:</strong> <a href="https://instagram.com/luminabelleza8">@luminabelleza8</a></p>
+      <button id="enviarWhatsapp">Agendar por WhatsApp</button>
     </section>
+  </main>
 
-    <footer>
-        <p>Contacto: <a href="https://wa.me/573045903075" target="_blank">+57 304 5903075</a></p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Lumina - Belleza y Cuidado</p>
+  </footer>
 
-    <script>
-        let carrito = [];
-        function agregarAlCarrito(servicio, precio) {
-            carrito.push({ servicio, precio });
-            mostrarCarrito();
-        }
-        function mostrarCarrito() {
-            const lista = document.getElementById("lista-carrito");
-            lista.innerHTML = "";
-            let total = 0;
-            carrito.forEach(item => {
-                const li = document.createElement("li");
-                li.textContent = `${item.servicio}: $${item.precio}`;
-                lista.appendChild(li);
-                total += item.precio;
-            });
-            document.getElementById("total").textContent = "Total: $" + total;
-            const mensaje = encodeURIComponent(carrito.map(i => `${i.servicio}: $${i.precio}`).join("\\n"));
-            document.getElementById("enviar-whatsapp").href = "https://wa.me/573045903075?text=" + mensaje;
-        }
-    </script>
 </body>
 </html>
