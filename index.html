@@ -2,215 +2,78 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lumina - Belleza y Cuidado</title>
-  <!-- Fuente cursiva bonita -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      background-color: #fff5f9;
-      color: #4a4a4a;
-    }
-
-    header {
-      background-color: #d9b8f3;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    header img {
-      width: 100px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 42px;
-      color: #000000; /* Negro */
-      font-family: 'Dancing Script', cursive;
-    }
-
-    header p {
-      font-size: 18px;
-      color: #fceaff;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      background-color: #b37fcb;
-      padding: 15px 10px;
-    }
-
-    nav a {
-      padding: 10px 20px;
-      background-color: #a368c3;
-      border-radius: 5px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #8d4cb4;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h2 {
-      color: #b37fcb;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .precios p {
-      font-size: 18px;
-      line-height: 1.8;
-      margin: 5px 0;
-      font-family: 'Arial', sans-serif;
-    }
-
-    .galeria {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .galeria img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px #ccc;
-    }
-
-    .contacto {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #fcd6e8;
-    }
-
-    .whatsapp-btn {
-      background-color: #25d366;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #b37fcb;
-      color: white;
-      padding: 20px;
-    }
-
-    .redes a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-      }
-
-      nav a {
-        width: 100%;
-        text-align: center;
-      }
-
-      .galeria {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lumina Belleza</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <img src="img/bf318453-56e6-4289-9433-12530b0d34fc.jpeg" alt="Logo Lumina">
-  <h1>Lumina</h1>
-  <p>Tu vida, tu cuerpo.</p>
-</header>
+  <header>
+    <h1 class="logo">Lumina Belleza</h1>
+    <nav>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#precios">Precios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav>
-  <a href="#precios">Precios</a>
-  <a href="#galeria">Galería</a>
-  <a href="#contacto">Contacto</a>
-</nav>
+  <section id="servicios" class="section">
+    <h2>Servicios</h2>
+    <div class="servicio">
+      <h3>Pestañas</h3>
+      <ul>
+        <li>Clásicas - $80.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20agendar%20pestañas%20clásicas">Agendar</a></li>
+        <li>Efecto Pestañina - $90.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20efecto%20pestañina">Agendar</a></li>
+        <li>Híbridas - $100.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20pestañas%20híbridas">Agendar</a></li>
+      </ul>
 
-<section id="precios" class="precios">
-  <h2>Precios</h2>
-  <p><strong>PESTAÑAS:</strong></p>
-  <p>Clásicas: $80.000</p>
-  <p>Efecto Pestañina: $90.000</p>
-  <p>Híbridas: $100.000</p>
+      <h3>Cejas</h3>
+      <ul>
+        <li>Semi permanentes - $30.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20cejas%20semi%20permanentes">Agendar</a></li>
+        <li>Laminado de cejas - $30.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20laminado%20de%20cejas">Agendar</a></li>
+      </ul>
 
-  <p><strong>CEJAS:</strong></p>
-  <p>Semi permanentes: $30.000</p>
-  <p>Laminado de cejas: $30.000</p>
+      <h3>Labios y Faciales</h3>
+      <ul>
+        <li>Baby lips - $50.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20baby%20lips">Agendar</a></li>
+        <li>Limpieza facial básica - $60.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20limpieza%20facial%20básica">Agendar</a></li>
+        <li>Limpieza facial profunda - $120.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20limpieza%20profunda">Agendar</a></li>
+        <li>Quemador grasa localizada - $80.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20aplicación%20de%20quemador%20grasa">Agendar</a></li>
+        <li>Hidrolipoclasia - $300.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20hidrolipoclasia">Agendar</a></li>
+        <li>Peptonas - $90.000 c/d sesión <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20peptonas">Agendar</a></li>
+      </ul>
 
-  <p><strong>LABIOS:</strong></p>
-  <p>Baby lips: $50.000</p>
+      <h3>Tratamientos generales (depende valoración)</h3>
+      <ul>
+        <li>Papada enzimática - $90.000 a $200.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20tratamiento%20papada">Agendar</a></li>
+        <li>Anti envejecimiento - $90.000 a $200.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20tratamiento%20anti%20edad">Agendar</a></li>
+        <li>Ácido hialurónico - $90.000 a $200.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20ácido%20hialurónico">Agendar</a></li>
+        <li>Botox - $120.000 <a class="btn" href="https://wa.me/573045903075?text=Hola!%20Quiero%20botox">Agendar</a></li>
+      </ul>
+    </div>
+  </section>
 
-  <p><strong>LIMPIEZAS:</strong></p>
-  <p>Limpieza facial básica: $80.000</p>
-  <p>Limpieza facial profunda: $120.000</p>
+  <section id="galeria" class="section">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img/bf318453-56e6-4289-9433-12530b0d34fc.jpeg" alt="Servicio 1">
+      <img src="img/067bff4a-783d-478a-8833-419f5e51fa66.jpeg" alt="Servicio 2">
+      <img src="img/cb1a635f-331d-47aa-b569-cfade5195c06.jpeg" alt="Servicio 3">
+      <img src="img/e5a79fea-1d79-48af-9d90-4b5a1747f018.jpeg" alt="Servicio 4">
+    </div>
+  </section>
 
-  <p><strong>TRATAMIENTOS:</strong></p>
-  <p>Aplicación quemador grasa localizada: $80.000</p>
-  <p>Hidrolipoclasia: $300.000</p>
-  <p>Peptonas: $90.000 c/d sesión</p>
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+    <p>Contáctanos por WhatsApp: <a class="whatsapp" href="https://wa.me/573045903075">+57 304 5903075</a></p>
+  </section>
 
-  <p><strong>TTOS GENERALES (según valoración):</strong></p>
-  <p>Papada enzimática: $90.000 - $200.000</p>
-  <p>Anti envejecimiento: $90.000 - $200.000</p>
-  <p>Ácido hialurónico: $90.000 - $200.000</p>
-  <p>Botox: $120.000 - $200.000</p>
-</section>
-
-<section id="galeria">
-  <h2>Galería</h2>
-  <div class="galeria">
-    <img src="img/067bff4a-783d-478a-8833-419f5e51fa66.jpeg" alt="Pestañas">
-    <img src="img/cb1a635f-331d-47aa-b569-cfade5195c06.jpeg" alt="Cejas">
-    <img src="img/e5a79fea-1d79-48af-9d90-4b5a1747f018.jpeg" alt="Labios y faciales">
-  </div>
-</section>
-
-<section id="contacto" class="contacto">
-  <h2>Contacto</h2>
-  <p>Agenda tu cita por WhatsApp</p>
-  <a class="whatsapp-btn" href="https://wa.me/573045903075" target="_blank">Escríbeme por WhatsApp</a>
-</section>
-
-<footer>
-  <p>&copy; 2025 Lumina - Belleza y cuidado</p>
-  <div class="redes">
-    <a href="https://instagram.com/luminabelleza8" target="_blank">Instagram</a> |
-    <a href="https://facebook.com/tucuenta" target="_blank">Facebook</a>
-  </div>
-</footer>
+  <footer>
+    <p>&copy; 2025 Lumina Belleza</p>
+  </footer>
 
 </body>
 </html>
