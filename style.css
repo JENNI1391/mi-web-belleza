@@ -1,25 +1,20 @@
-# El usuario indicó que no ve los colores, lo más probable es que el archivo "style.css" no tenga el contenido adecuado.
-# Vamos a generar un archivo CSS (style.css) con un diseño llamativo en tonos morado y rosado, y letra cursiva.
-
-from pathlib import Path
-
-css_content = """
 /* General */
 body {
   font-family: 'Segoe UI', cursive;
-  background: linear-gradient(to right, #fce4ec, #f3e5f5);
-  color: #3c003c;
+  background: linear-gradient(to right, #4a148c, #6a1b9a); /* Fondo más oscuro */
+  color: #f3e5f5;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, p, a, li, button {
   font-family: cursive;
+  text-align: center; /* Centra los títulos y textos */
 }
 
 /* Header */
 header {
-  background-color: #9c27b0;
+  background-color: #7b1fa2;
   color: white;
   padding: 20px;
   text-align: center;
@@ -49,24 +44,27 @@ nav ul li a {
   font-weight: bold;
 }
 
-/* Main */
-main {
+/* Secciones generales */
+.section {
   padding: 20px;
   text-align: center;
 }
 
+/* Servicios */
 .servicio {
-  background-color: #f8bbd0;
+  background-color: #ab47bc; /* Color más oscuro */
   margin: 10px auto;
   padding: 15px;
   border-radius: 15px;
   max-width: 500px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.servicio p {
-  font-size: 1.1em;
+.servicio span {
+  display: block;
   margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #fce4ec;
 }
 
 .servicio button {
@@ -84,7 +82,8 @@ main {
   background-color: #ba68c8;
 }
 
-#enviarWhatsapp {
+/* WhatsApp botón */
+#enviar-whatsapp {
   background-color: #8e24aa;
   padding: 12px 30px;
   border-radius: 25px;
@@ -93,9 +92,11 @@ main {
   border: none;
   margin-top: 20px;
   cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
 }
 
-#enviarWhatsapp:hover {
+#enviar-whatsapp:hover {
   background-color: #6a1b9a;
 }
 
@@ -113,19 +114,19 @@ main {
   height: 150px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
 }
 
 /* Contacto */
 #contacto {
-  background-color: #f3e5f5;
+  background-color: #6a1b9a;
   padding: 30px 10px;
   margin-top: 40px;
   border-top: 3px solid #ce93d8;
 }
 
 #contacto a {
-  color: #6a1b9a;
+  color: #f8bbd0;
   text-decoration: none;
   font-weight: bold;
 }
@@ -134,14 +135,7 @@ main {
 footer {
   text-align: center;
   padding: 15px;
-  background-color: #9c27b0;
+  background-color: #7b1fa2;
   color: white;
   margin-top: 30px;
 }
-"""
-
-# Guardar como style.css
-css_path = Path("/mnt/data/style.css")
-css_path.write_text(css_content)
-
-css_path.name
