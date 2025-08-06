@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Limpieza Fácil - Belleza & Cuidado</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumina - Belleza y Cuidado</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      background-color: #fff8f0;
-      color: #333;
+      background-color: #fff5f9;
+      color: #4a4a4a;
     }
 
     header {
-      background-color: #f7c8d2;
+      background-color: #d9b8f3;
       color: #fff;
       text-align: center;
       padding: 40px 20px;
+    }
+
+    header img {
+      width: 100px;
+      margin-bottom: 10px;
     }
 
     header h1 {
@@ -26,11 +31,12 @@
 
     header p {
       font-size: 18px;
+      color: #fceaff;
     }
 
     nav {
       text-align: center;
-      background-color: #f1a7b8;
+      background-color: #b37fcb;
       padding: 10px;
     }
 
@@ -48,35 +54,53 @@
     }
 
     .servicio {
-      background-color: #fff;
+      background-color: #ffffff;
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 20px;
-      box-shadow: 0 0 10px #ddd;
+      box-shadow: 0 0 10px #eed9f4;
     }
 
     .servicio h3 {
       margin-top: 0;
+      color: #b37fcb;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ccc;
     }
 
     .contacto {
       text-align: center;
-      padding: 20px;
-      background-color: #f7c8d2;
+      padding: 40px 20px;
+      background-color: #fcd6e8;
     }
 
     .whatsapp-btn {
       background-color: #25d366;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+      margin-top: 10px;
     }
 
     footer {
       text-align: center;
-      background-color: #f1a7b8;
+      background-color: #b37fcb;
       color: white;
       padding: 20px;
     }
@@ -86,13 +110,25 @@
       margin: 0 10px;
       text-decoration: none;
     }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      .galeria {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Limpieza Fácil</h1>
-  <p>Realza tu belleza natural con un toque profesional</p>
+  <img src="img/1F9F2A94-D4B8-4647-9805-A1BC14E11A2D.jpeg" alt="Logo Lumina">
+  <h1>Lumina</h1>
+  <p>Tu vida, tu cuerpo.</p>
 </header>
 
 <nav>
@@ -106,18 +142,19 @@
 
   <div class="servicio">
     <h3>Extensiones de Pestañas</h3>
-    <p>Clásicas - $10.000</p>
-    <p>Volumen ruso - $13.000</p>
+    <p>Efecto Rímel, 2D, Híbridas</p>
+    <p><strong>Beneficios:</strong> Realza tu mirada, luces maquillada, ahorras tiempo, siempre estás arreglada.</p>
+  </div>
+
+  <div class="servicio">
+    <h3>Laminado de Cejas</h3>
+    <p>Incluye diseño y tinte</p>
+    <p><strong>Beneficios:</strong> Aporta grosor, rellena huecos, dura de 3 a 5 semanas.</p>
   </div>
 
   <div class="servicio">
     <h3>Esmaltado Semipermanente</h3>
     <p>Manos o pies - $8.000</p>
-  </div>
-
-  <div class="servicio">
-    <h3>Laminado de Cejas</h3>
-    <p>Incluye diseño y tinte - $9.000</p>
   </div>
 
   <div class="servicio">
@@ -128,19 +165,23 @@
 
 <section id="galeria">
   <h2>Galería</h2>
-  <p>Aquí puedes agregar imágenes de tus trabajos</p>
+  <div class="galeria">
+    <img src="img/432CC0FF-8702-4967-8D6F-4D8A42D9046E.jpeg" alt="Pestañas pelo a pelo">
+    <img src="img/5D6737B9-DCEA-4427-92B5-F6193AEB7954.jpeg" alt="Beneficios Laminado">
+    <img src="img/9ABB8619-6A9E-40C9-90BF-4EA822BA332E.jpeg" alt="Beneficios Extensiones">
+  </div>
 </section>
 
 <section id="contacto" class="contacto">
   <h2>Contacto</h2>
   <p>Agenda tu cita por WhatsApp</p>
-  <a class="whatsapp-btn" href="https://wa.me/549XXXXXXXXXX" target="_blank">Escríbeme por WhatsApp</a>
+  <a class="whatsapp-btn" href="https://wa.me/573138850868" target="_blank">Escríbeme por WhatsApp</a>
 </section>
 
 <footer>
-  <p>&copy; 2025 Limpieza Fácil</p>
+  <p>&copy; 2025 Lumina - Belleza y cuidado</p>
   <div class="redes">
-    <a href="https://instagram.com/tucuenta" target="_blank">Instagram</a> |
+    <a href="https://instagram.com/luminabelleza8" target="_blank">Instagram</a> |
     <a href="https://facebook.com/tucuenta" target="_blank">Facebook</a>
   </div>
 </footer>
