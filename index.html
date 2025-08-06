@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Precios - Lumina</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumina - Belleza y Cuidado</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Arial', sans-serif;
       margin: 0;
@@ -34,30 +38,77 @@
       color: #fceaff;
     }
 
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      background-color: #b37fcb;
+      padding: 15px 10px;
+    }
+
+    nav a {
+      padding: 10px 20px;
+      background-color: #a368c3;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #8d4cb4;
+    }
+
     section {
       padding: 40px 20px;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #eed9f4;
     }
 
     h2 {
       color: #b37fcb;
+      margin-bottom: 20px;
       text-align: center;
     }
 
-    ul {
-      list-style-type: none;
-      padding: 0;
+    .precios p {
       font-size: 18px;
+      line-height: 1.8;
+      margin: 5px 0;
     }
 
-    ul li {
-      margin: 10px 0;
-      border-bottom: 1px solid #f0d9f9;
-      padding-bottom: 5px;
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .galeria img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ccc;
+    }
+
+    .contacto {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #fcd6e8;
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+      margin-top: 10px;
     }
 
     footer {
@@ -65,7 +116,32 @@
       background-color: #b37fcb;
       color: white;
       padding: 20px;
-      margin-top: 40px;
+    }
+
+    .redes a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        width: 100%;
+        text-align: center;
+      }
+
+      .galeria {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
@@ -77,50 +153,63 @@
   <p>Tu vida, tu cuerpo.</p>
 </header>
 
-<section>
+<nav>
+  <a href="#precios">Precios</a>
+  <a href="#galeria">Galería</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="precios" class="precios">
   <h2>Precios</h2>
-  <ul>
-    <li><strong>PESTAÑAS</strong></li>
-    <li>Clásicas: $80.000</li>
-    <li>Efecto Pestañina: $90.000</li>
-    <li>Híbridas: $100.000</li>
+  <p><strong>PESTAÑAS:</strong></p>
+  <p>Clásicas: $80.000</p>
+  <p>Efecto Pestañina: $90.000</p>
+  <p>Híbridas: $100.000</p>
 
-    <br>
+  <p><strong>CEJAS:</strong></p>
+  <p>Semi permanentes: $30.000</p>
+  <p>Laminado de cejas: $30.000</p>
 
-    <li><strong>CEJAS</strong></li>
-    <li>Semi permanentes: $30.000</li>
-    <li>Laminado de cejas: $30.000</li>
+  <p><strong>LABIOS:</strong></p>
+  <p>Baby lips: $50.000</p>
 
-    <br>
+  <p><strong>LIMPIEZAS:</strong></p>
+  <p>Limpieza facial básica: $60.000</p>
+  <p>Limpieza facial profunda: $120.000</p>
 
-    <li><strong>LABIOS</strong></li>
-    <li>Baby lips: $50.000</li>
+  <p><strong>TRATAMIENTOS:</strong></p>
+  <p>Aplicación quemador grasa localizada: $80.000</p>
+  <p>Hidrolipoclasia: $300.000</p>
+  <p>Peptonas: $90.000 c/d sesión</p>
 
-    <br>
+  <p><strong>TTOS GENERALES (según valoración):</strong></p>
+  <p>Papada enzimática: $90.000 - $200.000</p>
+  <p>Anti envejecimiento: $90.000 - $200.000</p>
+  <p>Ácido hialurónico: $90.000 - $200.000</p>
+  <p>Botox: $120.000</p>
+</section>
 
-    <li><strong>FACIALES</strong></li>
-    <li>Limpieza facial básica: $60.000</li>
-    <li>Limpieza facial profunda: $120.000</li>
+<section id="galeria">
+  <h2>Galería</h2>
+  <div class="galeria">
+    <img src="img/067bff4a-783d-478a-8833-419f5e51fa66.jpeg" alt="Pestañas">
+    <img src="img/cb1a635f-331d-47aa-b569-cfade5195c06.jpeg" alt="Cejas">
+    <img src="img/e5a79fea-1d79-48af-9d90-4b5a1747f018.jpeg" alt="Labios y faciales">
+  </div>
+</section>
 
-    <br>
-
-    <li><strong>TRATAMIENTOS CORPORALES</strong></li>
-    <li>Aplicación quemador grasa localizada: $80.000</li>
-    <li>Hidrolipoclasia: $300.000</li>
-    <li>Peptonas: $90.000 c/d sesión</li>
-
-    <br>
-
-    <li><strong>TTOS GENERALES (depende valoración)</strong></li>
-    <li>Ttos papada enzimática: (90.000 - 200.000)</li>
-    <li>Ttos anti envejecimiento: (90.000 - 200.000)</li>
-    <li>Ácido hialurónico: (90.000 - 200.000)</li>
-    <li>Botox: $120.000</li>
-  </ul>
+<section id="contacto" class="contacto">
+  <h2>Contacto</h2>
+  <p>Agenda tu cita por WhatsApp</p>
+  <a class="whatsapp-btn" href="https://wa.me/573138850868" target="_blank">Escríbeme por WhatsApp</a>
 </section>
 
 <footer>
   <p>&copy; 2025 Lumina - Belleza y cuidado</p>
+  <div class="redes">
+    <a href="https://instagram.com/luminabelleza8" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tucuenta" target="_blank">Facebook</a>
+  </div>
 </footer>
 
 </body>
