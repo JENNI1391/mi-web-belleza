@@ -2,105 +2,236 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lumina - Belleza y Estilo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lumina - Belleza y Cuidado</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
-      background-color: #fff0f6;
-      color: #333;
+      background-color: #fff5f9;
+      color: #4a4a4a;
     }
+
     header {
-      background-color: #ffccdd;
-      padding: 20px;
+      background-color: #d9b8f3;
+      color: #fff;
       text-align: center;
+      padding: 40px 20px;
     }
+
     header img {
       width: 100px;
-      border-radius: 50%;
+      margin-bottom: 10px;
     }
-    h1 {
-      margin: 10px 0 0;
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
     }
+
+    header p {
+      font-size: 18px;
+      color: #fceaff;
+    }
+
     nav {
-      background-color: #ff99bb;
       text-align: center;
+      background-color: #b37fcb;
       padding: 10px;
     }
+
     nav a {
-      color: white;
       margin: 0 15px;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
+
     section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .servicio, .precios {
+      background-color: #ffffff;
       padding: 20px;
-    }
-    .servicios img,
-    .galeria img {
-      width: 100%;
-      max-width: 300px;
-      margin: 10px;
       border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px #eed9f4;
     }
-    .contenedor-flex {
+
+    .servicio h3, .precios h3 {
+      margin-top: 0;
+      color: #b37fcb;
+    }
+
+    .galeria {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
     }
-    footer {
-      background-color: #ffccdd;
-      text-align: center;
-      padding: 15px;
+
+    .galeria img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #ccc;
     }
-    .contacto a {
-      display: inline-block;
-      margin: 10px;
-      color: #d1005d;
+
+    .contacto {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #fcd6e8;
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 5px;
+      text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #b37fcb;
+      color: white;
+      padding: 20px;
+    }
+
+    .redes a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      .galeria {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <img src="img/bf318453-56e6-4289-9433-12530b0d34fc.jpeg" alt="Logo Lumina" />
-  <h1>Bienvenid@s a Lumina</h1>
-  <p>Tu lugar de belleza y estilo</p>
+  <img src="img/bf318453-56e6-4289-9433-12530b0d34fc.jpeg" alt="Logo Lumina">
+  <h1>Lumina</h1>
+  <p>Tu vida, tu cuerpo.</p>
 </header>
 
 <nav>
   <a href="#servicios">Servicios</a>
+  <a href="#precios">Precios</a>
   <a href="#galeria">Galería</a>
   <a href="#contacto">Contacto</a>
 </nav>
 
 <section id="servicios">
   <h2>Servicios</h2>
-  <div class="contenedor-flex servicios">
-    <img src="img/067bff4a-783d-478a-8833-419f5e51fa66.jpeg" alt="Servicio 1">
-    <img src="img/cb1a635f-331d-47aa-b569-cfade5195c06.jpeg" alt="Servicio 2">
+
+  <div class="servicio">
+    <h3>Extensiones de Pestañas</h3>
+    <p>Efecto Rímel, 2D, Híbridas</p>
+    <p><strong>Beneficios:</strong> Realza tu mirada, luces maquillada, ahorras tiempo, siempre estás arreglada.</p>
+  </div>
+
+  <div class="servicio">
+    <h3>Laminado de Cejas</h3>
+    <p>Incluye diseño y tinte</p>
+    <p><strong>Beneficios:</strong> Aporta grosor, rellena huecos, dura de 3 a 5 semanas.</p>
+  </div>
+
+  <div class="servicio">
+    <h3>Esmaltado Semipermanente</h3>
+    <p>Manos o pies - $8.000</p>
+  </div>
+
+  <div class="servicio">
+    <h3>Quemadores de Grasa</h3>
+    <p>Sesión localizada - $12.000</p>
+  </div>
+</section>
+
+<section id="precios">
+  <h2>Precios</h2>
+  <div class="precios">
+    <h3>PESTAÑAS</h3>
+    <ul>
+      <li>Clásicas: $80.000</li>
+      <li>Efecto Pestañina: $90.000</li>
+      <li>Híbridas: $100.000</li>
+    </ul>
+    <h3>CEJAS</h3>
+    <ul>
+      <li>Semi permanentes: $30.000</li>
+      <li>Laminado de cejas: $30.000</li>
+    </ul>
+    <h3>LABIOS</h3>
+    <ul>
+      <li>Baby lips: $50.000</li>
+    </ul>
+    <h3>FACIAL</h3>
+    <ul>
+      <li>Limpieza facial básica: $60.000</li>
+      <li>Limpieza facial profunda: $120.000</li>
+    </ul>
+    <h3>TRATAMIENTOS CORPORALES</h3>
+    <ul>
+      <li>Aplicación quemador grasa localizada: $80.000</li>
+      <li>Hidrolipoclasia: $300.000</li>
+      <li>Peptonas: $90.000 c/d sesión</li>
+    </ul>
+    <h3>TRATAMIENTOS GENERALES</h3>
+    <ul>
+      <li>Ttos papada enzimática: $90.000 - $200.000</li>
+      <li>Ttos anti envejecimiento: $90.000 - $200.000</li>
+      <li>Ácido hialurónico: $90.000 - $200.000</li>
+      <li>Botox: $120.000</li>
+    </ul>
   </div>
 </section>
 
 <section id="galeria">
   <h2>Galería</h2>
-  <div class="contenedor-flex galeria">
-    <img src="img/e5a79fea-1d79-48af-9d90-4b5a1747f018.jpeg" alt="Galería 1">
+  <div class="galeria">
+    <img src="img/067bff4a-783d-478a-8833-419f5e51fa66.jpeg" alt="Extensiones de pestañas">
+    <img src="img/cb1a635f-331d-47aa-b569-cfade5195c06.jpeg" alt="Laminado de cejas">
+    <img src="img/e5a79fea-1d79-48af-9d90-4b5a1747f018.jpeg" alt="Tratamientos faciales">
   </div>
 </section>
 
 <section id="contacto" class="contacto">
   <h2>Contacto</h2>
-  <p>¡Escríbenos por WhatsApp o síguenos en redes!</p>
-  <a href="https://wa.me/573001112233" target="_blank">📱 WhatsApp</a><br>
-  <a href="https://www.instagram.com/lumina_belleza" target="_blank">📸 Instagram</a><br>
-  <a href="https://www.facebook.com/lumina.belleza" target="_blank">📘 Facebook</a>
+  <p>Agenda tu cita por WhatsApp</p>
+  <a class="whatsapp-btn" href="https://wa.me/573138850868" target="_blank">Escríbeme por WhatsApp</a>
 </section>
 
 <footer>
-  <p>© 2025 Lumina. Todos los derechos reservados.</p>
+  <p>&copy; 2025 Lumina - Belleza y cuidado</p>
+  <div class="redes">
+    <a href="https://instagram.com/luminabelleza8" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/tucuenta" target="_blank">Facebook</a>
+  </div>
 </footer>
 
 </body>
