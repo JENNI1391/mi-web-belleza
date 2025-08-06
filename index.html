@@ -1,124 +1,73 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lumina - Belleza</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1 class="logo">Lumina</h1>
-    <nav>
-      <ul>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#precios">Precios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="#galeria">Galería</a></li>
-      </ul>
-    </nav>
-  </header>
+<section class="services">
+  <h2>PESTAÑAS</h2>
+  <div class="service">
+    <span>Clásicas - $80.000</span>
+    <button onclick="addToCart('Clásicas - $80.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Efecto Pestañina - $90.000</span>
+    <button onclick="addToCart('Efecto Pestañina - $90.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Híbridas - $100.000</span>
+    <button onclick="addToCart('Híbridas - $100.000')">Agregar</button>
+  </div>
 
-  <main>
-    <section id="precios">
-      <h2>Precios</h2>
-      <div class="servicio">
-        <p>Pestañas Clásicas: $80.000</p>
-        <button onclick="agregarAlCarrito('Pestañas Clásicas: $80.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Efecto Pestañina: $90.000</p>
-        <button onclick="agregarAlCarrito('Efecto Pestañina: $90.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Híbridas: $100.000</p>
-        <button onclick="agregarAlCarrito('Híbridas: $100.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Semi permanentes: $30.000</p>
-        <button onclick="agregarAlCarrito('Cejas Semi permanentes: $30.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Laminado de cejas: $30.000</p>
-        <button onclick="agregarAlCarrito('Laminado de cejas: $30.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Baby lips: $50.000</p>
-        <button onclick="agregarAlCarrito('Baby lips: $50.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Limpieza facial básica: $60.000</p>
-        <button onclick="agregarAlCarrito('Limpieza facial básica: $60.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Limpieza facial profunda: $120.000</p>
-        <button onclick="agregarAlCarrito('Limpieza facial profunda: $120.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Aplicación quemador grasa localizada: $80.000</p>
-        <button onclick="agregarAlCarrito('Aplicación quemador grasa localizada: $80.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Hidrolipoclasia: $300.000</p>
-        <button onclick="agregarAlCarrito('Hidrolipoclasia: $300.000')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Peptonas: $90.000 c/d sesión</p>
-        <button onclick="agregarAlCarrito('Peptonas: $90.000 c/d sesión')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Ttos papada enzimática: (90.000 - 200.000)</p>
-        <button onclick="agregarAlCarrito('Ttos papada enzimática: (90.000 - 200.000)')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Ttos anti envejecimiento: (90.000 - 200.000)</p>
-        <button onclick="agregarAlCarrito('Ttos anti envejecimiento: (90.000 - 200.000)')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Ácido hialurónico: (90.000 - 200.000)</p>
-        <button onclick="agregarAlCarrito('Ácido hialurónico: (90.000 - 200.000)')">Agregar al carrito</button>
-      </div>
-      <div class="servicio">
-        <p>Botox: $120.000</p>
-        <button onclick="agregarAlCarrito('Botox: $120.000')">Agregar al carrito</button>
-      </div>
+  <h2>CEJAS</h2>
+  <div class="service">
+    <span>Semi permanentes - $30.000</span>
+    <button onclick="addToCart('Cejas Semi permanentes - $30.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Laminado de cejas - $30.000</span>
+    <button onclick="addToCart('Laminado de cejas - $30.000')">Agregar</button>
+  </div>
 
-      <button id="enviarWhatsapp" onclick="enviarCarrito()">Enviar pedido por WhatsApp</button>
-    </section>
+  <h2>LABIOS</h2>
+  <div class="service">
+    <span>Baby lips - $50.000</span>
+    <button onclick="addToCart('Baby lips - $50.000')">Agregar</button>
+  </div>
 
-    <section id="galeria">
-      <h2>Galería</h2>
-      <div class="galeria">
-        <img src="img/bf318453-56e6-4289-9433-12530b0d34fc.jpeg" alt="Imagen 1">
-        <img src="img/067bff4a-783d-478a-8833-419f5e51fa66.jpeg" alt="Imagen 2">
-        <img src="img/cb1a635f-331d-47aa-b569-cfade5195c06.jpeg" alt="Imagen 3">
-        <img src="img/e5a79fea-1d79-48af-9d90-4b5a1747f018.jpeg" alt="Imagen 4">
-      </div>
-    </section>
+  <h2>LIMPIEZA FACIAL</h2>
+  <div class="service">
+    <span>Limpieza facial básica - $60.000</span>
+    <button onclick="addToCart('Limpieza facial básica - $60.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Limpieza facial profunda - $120.000</span>
+    <button onclick="addToCart('Limpieza facial profunda - $120.000')">Agregar</button>
+  </div>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>WhatsApp: <a href="https://wa.me/573045903075" target="_blank">+57 304 5903075</a></p>
-    </section>
-  </main>
+  <h2>APLICACIÓN QUEMADOR DE GRASA</h2>
+  <div class="service">
+    <span>Localizada - $80.000</span>
+    <button onclick="addToCart('Quemador grasa localizada - $80.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Hidrolipoclasia - $300.000</span>
+    <button onclick="addToCart('Hidrolipoclasia - $300.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Peptonas (c/d sesión) - $90.000</span>
+    <button onclick="addToCart('Peptonas - $90.000')">Agregar</button>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Lumina</p>
-  </footer>
-
-  <script>
-    const carrito = [];
-
-    function agregarAlCarrito(servicio) {
-      carrito.push(servicio);
-      alert(servicio + " agregado al carrito.");
-    }
-
-    function enviarCarrito() {
-      const mensaje = carrito.join("%0A");
-      const numero = "573045903075";
-      window.open(`https://wa.me/${numero}?text=Hola, quiero agendar los siguientes servicios:%0A${mensaje}`, '_blank');
-    }
-  </script>
-</body>
-</html>
+  <h2>TTOS GENERALES (según valoración)</h2>
+  <div class="service">
+    <span>Ttos papada enzimática - $90.000 - $200.000</span>
+    <button onclick="addToCart('Ttos papada enzimática - $90.000 - $200.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Ttos anti envejecimiento - $90.000 - $200.000</span>
+    <button onclick="addToCart('Ttos anti envejecimiento - $90.000 - $200.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Ácido hialurónico - $90.000 - $200.000</span>
+    <button onclick="addToCart('Ácido hialurónico - $90.000 - $200.000')">Agregar</button>
+  </div>
+  <div class="service">
+    <span>Botox - $120.000</span>
+    <button onclick="addToCart('Botox - $120.000')">Agregar</button>
+  </div>
+</section>
