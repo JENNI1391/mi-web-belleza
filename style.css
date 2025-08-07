@@ -109,11 +109,11 @@ nav ul li a {
   padding: 12px 30px;
   border-radius: 25px;
   font-size: 1.1em;
-  color: white;
+  color: black;
   border: none;
   margin-top: 20px;
   display: inline-block;
-  text-align: center;
+  text-align: none;
 }
 
 #enviar-whatsapp:hover {
