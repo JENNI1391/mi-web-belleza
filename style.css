@@ -133,3 +133,19 @@ footer a {
   color: white;
   text-decoration: none;
 }
+/* Redes Sociales en footer */
+.redes-sociales {
+  margin-top: 10px;
+}
+
+.redes-sociales img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.redes-sociales img:hover {
+  transform: scale(1.2);
+}
+
